@@ -1,3 +1,8 @@
+body {
+  background-color: #f4f8fb;
+}
+
 #main {
   width: 500px;
+  margin: auto;
 }
