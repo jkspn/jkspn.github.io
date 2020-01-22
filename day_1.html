@@ -1,27 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="master.css">
-    <script src="https://kit.fontawesome.com/02fb750987.js" crossorigin="anonymous"></script>
-    <title>Testing out Github Pages. 👋</title>
-  </head>
-  <body>
-    <div id="main">
-      <div id="main-inset">
-        <div id="photocredit">
-          <i class="fas fa-camera"> </i> by <a href="https://unsplash.com/photos/lT7zmkth3o8">Cris Tagupa</a>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/master.css">
+  <script src="https://kit.fontawesome.com/02fb750987.js" crossorigin="anonymous"></script>
+  <title>👋 Testing out Github Pages.</title>
+</head>
+
+<body>
+  <div class="body">
+    <div class="header">
+      <div class="photocredit">
+        <i class="fas fa-camera"> </i> by <a href="https://unsplash.com/photos/lT7zmkth3o8">Cris Tagupa</a>
       </div>
-      <div id="main-content">
+    </div>
+    <div class="content">
+      <div class="content-main">
         <h1>Testing out Github Pages</h1>
         <hr>
         <p><strong>Wow.</strong> This is amazing.</p>
-        <p>I would've liked to have found out about this way back. I'm trying to make a portfolio website see, and at the same time learn more about coding websites by hand. All for a <strong>strong</strong> background on modern HTML/CSS/JS methods with an <em>emphasis</em> on learning new things.</p>
+        <p>I would've liked to have found out about this way back. I'm trying to make a portfolio website see, and at the same time learn more about coding websites by hand. All for a <strong>strong</strong> background on modern HTML/CSS/JS methods
+          with an <em>emphasis</em> on learning new things.</p>
         <strong>Good thing I haven't started with my Notion portfolio yet.</strong> Maybe I'll resort to using this as a launchpad after all.</p>
         <p>All the best,</p>
         <p><strong>John E.</strong> 👻<br><a href="https://www.twitter.com/jkspn" title="John Espino's Twitter Account">@jkspn</a></p>
       </div>
+      <div class="content-footnotes">
+        <hr>
+        <h4>Notes</h4>
+        <ol>
+          <li>How to put that header image up top using <code>&lt;background-size&gt;</code>. <a href="https://www.w3schools.com/cssref/css3_pr_background-size.asp">↬</a></li>
+          <li>More information on background images in <code>&lt;div&gt;</code>. <a href="https://www.w3schools.com/cssref/pr_background-position.asp">↬</a></li>
+          <li>I haven't used the <code>&lt;float&gt;</code> property in this current iteration but might be planning it for future menus and navigation. <a href="https://www.w3schools.com/css/css_float.asp">↬</a></li>
+          <li>Fourth note in I had to lookup if there was a <code>&lt;code&gt;</code> HTML tag. Turns out, there is. Good things come to those who DuckDuckGo. <a href="https://www.w3schools.com/tags/tag_code.asp">↬</a></li>
+          <li>I imported <code>Work Sans</code> from <a href="https://fonts.google.com/specimen/Work+Sans">Google Fonts</a> but I couldn't figure out how to use specific weights. Seems like there is a more recent development in how to implement this.
+            (Added to Laundry List) <a href="https://stackoverflow.com/questions/7256065/specifying-style-and-weight-for-google-fonts">↬</a></li>
+          <li>I used to be lazy and just exported PNGs or used SVGs when I need a Font Awesome icon. Today, I learned how to import the font itself. And I wonder why I never did this before. <a
+              href="https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use">↬</a></li>
+          <li>If you're using Font Awesome in your projects, know that they have a handy cheatsheet you can <code>⌘+F</code> on all day long. Pro version also included. <a href="https://fontawesome.com/cheatsheet/free/brands">↬</a></li>
+          <li>How to add a drop shadow. <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.asp">↬</a></li>
+          <li>Opacity in color values (HSLA) <a href="https://www.w3schools.com/css/css3_colors.asp">↬</a></li>
+          <li>Some swanky styles for <code>&lt;hr&gt;</code> elements. <a href="https://css-tricks.com/examples/hrs/">↬</a></li>
+          <li>Didn't know there was a <code>&lt;sup&gt;</code> HTML tag. <a href="https://www.w3schools.com/tags/tag_sup.asp">↬</a></li>
+          <li><code>&lt;strikethrough&gt;</code> has been long deprecated. Use <code>&lt;del&gt;</code> to denote a delete phrase or <code>&lt;s&gt;</code> to denote that information has changed since publication. <a
+              href="https://www.w3schools.com/tags/tag_s.asp">↬</a>
+          </li>
+          <li>To put angled brackets in code, the special characters are <code>&amp;lt;</code> for &lt; and <code>&amp;gt;</code> for &gt; <a href="https://stackoverflow.com/questions/6817262/how-to-display-html-tags-as-plain-text">↬</a></li>
+          <li>Tried so hard to make a custom list style for the footnotes but can't really execute it yet. <a href="https://css-tricks.com/custom-list-number-styling/">↬</a></li>
+          <li>To render the custom numbers in the previous note, I tried to use <code>counter-reset</code> and <code>counter-increment</code>. Handy to know, but for reasons explained in the next note, kind of a mere curiousity for me. <a
+              href="https://css-tricks.com/counting-css-counters-css-grid/">↬</a></li>
+          <li>I tried to use <code>calc()</code> and <code>counter-increment</code> to have a rudimentary variable system. Turns out you can't use it for more complex calculations. Also, it returns a <code>string</code> value, not an
+            <code>integer</code> or <code>float</code>, so better resort to JS for calculations involving variables. <a href="https://www.w3.org/TR/css3-values/#calc-notation">↬</a></li>
+          <li>Making things appear and disappear without JS and only CSS. <a href="https://codepen.io/chrisshaw/pen/HBgiI">↬1</a>
+            <a href="https://stackoverflow.com/questions/45578924/css-transition-on-hover-to-display-div">↬2</a>
+            <a href="https://codepen.io/brundolf/pen/bqqeye">↬3</a>
+            <a href="http://jsfiddle.net/thechrisjordan/3Fc7D/23/">↬4</a>
+          </li>
+          <li>I always forget the power of the comma <code>,</code> in CSS—it bridges all (really, it makes you simplify declarations), such as when I tried to use the same properties for CSS transitions of different elements. <a
+              href="https://stackoverflow.com/questions/7048313/how-to-have-multiple-css-transitions-on-an-element">↬</a></li>
+          <li>This is really a good read if you're trying to learn CSS transitions. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Specifications">↬</a></li>
+          <li>Is there a way to have boolean operations and more advanced selectors in CSS? Asking for a friend. <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">↬1</a>
+            <a href="https://www.w3schools.com/css/css_combinators.asp">↬2</a></li>
+          <li>I always forget, but <code>span</code> has no width and height, except when you add a <code>display: inline-block;</code> to your style. It's a hack but it works. <a
+              href="https://stackoverflow.com/questions/2343989/how-to-set-height-property-for-span">↬</a>
+          </li>
+        </ol>
+        <h4>Inspiration</h4>
+        Got two websites to be thankful for today:
+        <ul>
+          <li><strong>Refactoring UI by Adam Wathan and Steve Schoger</strong><br>I've always been a fan of <a href="https://twitter.com/steveschoger">@steveschoger's tweets</a> on UI design, and Refactoring UI is their book all about it. The website
+            looks super clean + you can see the similarities immediately. <a href="https://refactoringui.com">↬</a>
+          </li>
+          <li><strong>Ghost.org</strong><br>Ghost is an open-source publishing platform that is run by a non-profit company founded by <a href="https://twitter.com/JohnONolan">John O'Nolan</a> and <a
+              href="https://twitter.com/ErisDS/with_replies?lang=en">Hannah Wolfe</a> in 2013. To be honest I'd like to work with the Ghost team and that thought
+            really pushed me to accelerate learning about <em>modern</em> web development.<br><br>There's much to talk about how I admire their values and more importantly the <em>path</em> they took in alignment with their principles (as well as the
+            future
+            of journalism and tech's role in its evolution), but I'll save that when I get to run the Jekyll installation on this website.<br><br>[Speaking-of-websites] the website for the publishing platform has similar design roots with Refactoring
+            UI's
+            but their judicious use of color and well-planned information
+            architecture
+            makes it a real treat to <del>repeatedly</del> read information about their organization. <a href="https://ghost.org">↬</a></li>
+        </ul>
+      </div>
     </div>
-  </body>
+
+    <div class="footer">
+      <div class="footer_menu">
+        <strong>Navigation</strong>
+        <a href="index.html">Home</a> /
+        <a href="goals.html">Learning Goals</a> /
+        <a href="todo.html">Laundry List</a>
+        <hr>
+        <strong>Dailies</strong>
+        <a href="day_1.html">Day 1</a>
+        <!-- <div class="footer_menu_item" style="background-color: #bbb;">
+          <p>Learning Goals</p>
+        </div>
+        <div class="footer_menu_item" style="background-color: #ccc;">
+          <p>To Do List</p>
+        </div>
+        <div class="footer_menu_item" style="background-color: #ddd;">
+          <p>Day 1</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
