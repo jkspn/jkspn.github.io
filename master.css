@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+body {
+  background-color: #f4f8fb;
+  font-family: 'Work Sans', sans-serif;}
+hr {
+  color: grey;
+}
+
+#main {
+  width: 500px;
+  margin: auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px #e1e5e9;
+  position: relative;
+}
+
+#main-inset {
+  background-image: url('https://images.unsplash.com/photo-1529686342540-1b43aec0df75');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
