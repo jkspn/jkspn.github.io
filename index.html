@@ -1,458 +1,83 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>John Kevin Espino — Product · Marketing · Design</title>
-    <meta name="description"
-        content="Product, marketing, and design across Web3, AI, and data. I turn complex technology into products people understand and want: go-to-market, brand, and UI/UX.">
-    <meta name="theme-color" content="#017100">
-    <meta name="color-scheme" content="light dark">
-    <script>try { localStorage.removeItem("theme") } catch (e) { }</script>
-    <meta property="og:title" content="John Kevin Espino — Product · Marketing · Design">
-    <meta property="og:description"
-        content="Turns complex technology into products people understand and want: shapes the message, leads go-to-market, and designs what ships.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jkspn.xyz/">
-    <meta property="og:image" content="https://jkspn.xyz/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="John Kevin Espino: Product, Marketing, Design">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://jkspn.xyz/og-image.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Icons: Font Awesome 7.3.1 by Fonticons, Inc. (https://fontawesome.com). Free icons CC BY 4.0; the theme sun icon is Font Awesome Pro (commercial licence). -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>John Kevin Espino — Product · Marketing · Design</title>
+<meta name="description" content="Product, marketing, and design across Web3, AI, and data. I turn complex technology into products people understand and want: go-to-market, brand, and UI/UX.">
+<meta name="theme-color" content="#017100">
+<meta name="color-scheme" content="light dark">
+<script>try{localStorage.removeItem("theme")}catch(e){}</script>
+<meta property="og:title" content="John Kevin Espino — Product · Marketing · Design">
+<meta property="og:description" content="Turns complex technology into products people understand and want: shapes the message, leads go-to-market, and designs what ships.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jkspn.xyz/">
+<meta property="og:image" content="https://jkspn.xyz/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="John Kevin Espino: Product, Marketing, Design">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jkspn.xyz/og-image.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Icons: Font Awesome 7.3.1 by Fonticons, Inc. (https://fontawesome.com). Free icons CC BY 4.0; the theme sun icon is Font Awesome Pro (commercial licence). -->
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <nav class="float" id="float-nav" aria-label="Primary">
-        <div class="pill"><a class="navphoto" href="#top" aria-label="Back to top"><img src="assets/photo.png"
-                    width="32" height="32" alt=""></a><button class="menu-btn" type="button" id="menu-btn"
-                aria-expanded="false" aria-controls="nav-links" aria-label="Menu" title="Menu"><svg
-                    viewBox="0 0 640 640" aria-hidden="true">
-                    <path
-                        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
-                </svg></button>
-            <ul class="links" id="nav-links">
-                <li><a class="home" href="#top" aria-current="true" aria-label="Top of page" title="Top of page"><svg
-                            viewBox="0 0 640 640" aria-hidden="true">
-                            <path
-                                d="M424.2 131.4L423 122.9C420.5 105.3 406.7 91.5 389.1 89L380.6 87.8C367.5 85.9 358.4 73.8 360.2 60.6C362 47.4 374.2 38.4 387.4 40.2L395.9 41.4C434.6 46.9 465 77.4 470.6 116.1L471.8 124.6C473.7 137.7 464.6 149.9 451.4 151.8C438.2 153.7 426.1 144.6 424.2 131.4zM249.4 134.6C236.9 122.1 236.9 101.8 249.4 89.3C261.9 76.8 282.2 76.8 294.7 89.3L486.7 281.3C490 284.6 496.1 282.4 496.1 277.6L496.1 199.9C496.1 177.8 514 159.9 536.1 159.9C558.2 159.9 576.1 177.8 576.1 199.9L576.1 376.2C576.1 436.4 548.2 493.1 500.6 529.9C449.8 569.1 385.1 579.6 327 562.6C298.6 555.5 271.7 540.8 249.4 518.5L244.5 513.6C160.6 429.7 114.3 383.4 105.4 374.5C92.9 362 92.9 341.7 105.4 329.2C117.9 316.7 138.2 316.7 150.7 329.2L182.6 361.1L182.7 361.2L229.3 407.8C234.5 413 242.9 413 248 407.8C253.1 402.6 253.2 394.2 248 389.1L121.4 262.6C108.9 250.1 108.9 229.8 121.4 217.3C133.9 204.8 154.2 204.8 166.7 217.3L293.3 344C298.5 349.2 306.9 349.2 312 344C317.1 338.8 317.2 330.4 312 325.3L169.4 182.6C156.9 170.1 156.9 149.8 169.4 137.3C181.9 124.8 202.2 124.8 214.7 137.3L357.3 280C362.5 285.2 370.9 285.2 376 280C381.1 274.8 381.2 266.4 376 261.3L249.4 134.6zM60.6 424.2C73.7 422.3 85.9 431.4 87.8 444.6L89 453.1C91.5 470.7 105.3 484.5 122.9 487L131.4 488.2C144.5 490.1 153.6 502.2 151.8 515.4C150 528.6 137.8 537.6 124.6 535.8L116.1 534.6C77.4 529 47 498.6 41.5 459.9L40.3 451.4C38.4 438.3 47.5 426.1 60.7 424.2z" />
-                        </svg><span class="home-t">Home</span></a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dl dl-nav"><button class="dl-trigger navdl" type="button" id="dl-btn-3" aria-haspopup="menu"
-                        aria-expanded="false" aria-controls="dl-menu-3">Download<svg class="i-chev"
-                            viewBox="0 0 448 512" aria-hidden="true">
-                            <path
-                                d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                        </svg></button>
-                    <ul class="dl-menu" id="dl-menu-3" role="menu" hidden>
-                        <li class="dl-head" role="presentation">Download</li>
-                        <li role="none"><a role="menuitem"
-                                href="docs/John%20Espino%20%C2%B7%20Curriculum%20Vitae%20(2026).pdf" target="_blank"
-                                rel="noopener"><span>CV</span><small><b class="fmt">PDF</b>1.9 MB</small></a></li>
-                        <li role="none"><a role="menuitem"
-                                href="docs/John%20Espino%20%C2%B7%20Selected%20Work%20(2026).pdf" target="_blank"
-                                rel="noopener"><span>Selected Work</span><small><b class="fmt">PDF</b>78 MB</small></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="actions"><button class="theme" type="button" id="theme-toggle" aria-label="Switch theme"
-                    title="Toggle theme"><svg class="moon" viewBox="0 0 640 640" aria-hidden="true">
-                        <path
-                            d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z" />
-                    </svg><svg class="sun" viewBox="0 0 640 640" aria-hidden="true">
-                        <path
-                            d="M288 144L288 96C288 78.3 302.3 64 320 64C337.7 64 352 78.3 352 96L352 144C352 161.7 337.7 176 320 176C302.3 176 288 161.7 288 144zM224 320C224 267 267 224 320 224C373 224 416 267 416 320C416 373 373 416 320 416C267 416 224 373 224 320zM64 320C64 302.3 78.3 288 96 288L144 288C161.7 288 176 302.3 176 320C176 337.7 161.7 352 144 352L96 352C78.3 352 64 337.7 64 320zM496 288L544 288C561.7 288 576 302.3 576 320C576 337.7 561.7 352 544 352L496 352C478.3 352 464 337.7 464 320C464 302.3 478.3 288 496 288zM320 576C302.3 576 288 561.7 288 544L288 496C288 478.3 302.3 464 320 464C337.7 464 352 478.3 352 496L352 544C352 561.7 337.7 576 320 576zM137.4 502.6C124.9 490.1 124.9 469.8 137.4 457.3L169.4 425.3C181.9 412.8 202.2 412.8 214.7 425.3C227.2 437.8 227.2 458.1 214.7 470.6L182.7 502.6C170.2 515.1 149.9 515.1 137.4 502.6zM425.4 169.3L457.4 137.3C469.9 124.8 490.2 124.8 502.7 137.3C515.2 149.8 515.2 170.1 502.7 182.6L470.7 214.6C458.2 227.1 437.9 227.1 425.4 214.6C412.9 202.1 412.9 181.8 425.4 169.3zM502.7 502.6C490.2 515.1 469.9 515.1 457.4 502.6L425.4 470.6C412.9 458.1 412.9 437.8 425.4 425.3C437.9 412.8 458.2 412.8 470.7 425.3L502.7 457.3C515.2 469.8 515.2 490.1 502.7 502.6zM169.4 214.6L137.4 182.6C124.9 170.1 124.9 149.8 137.4 137.3C149.9 124.8 170.2 124.8 182.7 137.3L214.7 169.3C227.2 181.8 227.2 202.1 214.7 214.6C202.2 227.1 181.9 227.1 169.4 214.6z" />
-                    </svg></button><a class="navcta" href="mailto:john@jkspn.xyz" data-contact>Get in Touch</a></div>
-        </div>
-    </nav>
-    <main id="main">
-        <header class="hero" id="top">
-            <div class="wrap">
-                <div class="top">
-                    <img class="photo" src="assets/photo.png" width="96" height="96"
-                        alt="Portrait of John Kevin Espino">
-                    <h1>John Kevin Espino</h1>
-                    <p class="tagline">Product · Marketing · Design</p>
-                </div>
-                <hr class="divider">
-                <p class="intro" id="about"><span class="lede">I work at the intersection of product, marketing, and
-                        design.</span><span class="rest">Over 10+ years across Web3, AI, and data, I’ve turned complex
-                        technology into products people understand and want: I shape the message, lead go-to-market, and
-                        design what ships. I’ve grown communities from 30,000 to 80,000+ and built a 50,000-person
-                        launch waitlist, coordinating teams, agencies, and partners along the way.</span></p>
-                <div class="cta">
-                    <a class="btn solid big cta-pencil" href="mailto:john@jkspn.xyz" data-contact><span class="lbl">Get
-                            in Touch</span><span class="draw"><span class="ink"></span><svg class="pen"
-                                viewBox="0 0 640 640" aria-hidden="true">
-                                <path
-                                    d="M100.4 417.2C104.5 402.6 112.2 389.3 123 378.5L304.2 197.3L338.1 163.4C354.7 180 389.4 214.7 442.1 267.4L476 301.3L442.1 335.2L260.9 516.4C250.2 527.1 236.8 534.9 222.2 539L94.4 574.6C86.1 576.9 77.1 574.6 71 568.4C64.9 562.2 62.6 553.3 64.9 545L100.4 417.2zM156 413.5C151.6 418.2 148.4 423.9 146.7 430.1L122.6 517L209.5 492.9C215.9 491.1 221.7 487.8 226.5 483.2L155.9 413.5zM510 267.4C493.4 250.8 458.7 216.1 406 163.4L372 129.5C398.5 103 413.4 88.1 416.9 84.6C430.4 71 448.8 63.4 468 63.4C487.2 63.4 505.6 71 519.1 84.6L554.8 120.3C568.4 133.9 576 152.3 576 171.4C576 190.5 568.4 209 554.8 222.5C551.3 226 536.4 240.9 509.9 267.4z" />
-                            </svg></span></a>
-                </div>
-            </div>
-        </header>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="float" id="float-nav" aria-label="Primary"><div class="pill"><a class="navphoto" href="#top" aria-label="Back to top"><img src="assets/photo.png" width="32" height="32" alt=""></a><button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Menu" title="Menu"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg></button><ul class="links" id="nav-links"><li><a class="home" href="#top" aria-current="true" aria-label="Top of page" title="Top of page"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M424.2 131.4L423 122.9C420.5 105.3 406.7 91.5 389.1 89L380.6 87.8C367.5 85.9 358.4 73.8 360.2 60.6C362 47.4 374.2 38.4 387.4 40.2L395.9 41.4C434.6 46.9 465 77.4 470.6 116.1L471.8 124.6C473.7 137.7 464.6 149.9 451.4 151.8C438.2 153.7 426.1 144.6 424.2 131.4zM249.4 134.6C236.9 122.1 236.9 101.8 249.4 89.3C261.9 76.8 282.2 76.8 294.7 89.3L486.7 281.3C490 284.6 496.1 282.4 496.1 277.6L496.1 199.9C496.1 177.8 514 159.9 536.1 159.9C558.2 159.9 576.1 177.8 576.1 199.9L576.1 376.2C576.1 436.4 548.2 493.1 500.6 529.9C449.8 569.1 385.1 579.6 327 562.6C298.6 555.5 271.7 540.8 249.4 518.5L244.5 513.6C160.6 429.7 114.3 383.4 105.4 374.5C92.9 362 92.9 341.7 105.4 329.2C117.9 316.7 138.2 316.7 150.7 329.2L182.6 361.1L182.7 361.2L229.3 407.8C234.5 413 242.9 413 248 407.8C253.1 402.6 253.2 394.2 248 389.1L121.4 262.6C108.9 250.1 108.9 229.8 121.4 217.3C133.9 204.8 154.2 204.8 166.7 217.3L293.3 344C298.5 349.2 306.9 349.2 312 344C317.1 338.8 317.2 330.4 312 325.3L169.4 182.6C156.9 170.1 156.9 149.8 169.4 137.3C181.9 124.8 202.2 124.8 214.7 137.3L357.3 280C362.5 285.2 370.9 285.2 376 280C381.1 274.8 381.2 266.4 376 261.3L249.4 134.6zM60.6 424.2C73.7 422.3 85.9 431.4 87.8 444.6L89 453.1C91.5 470.7 105.3 484.5 122.9 487L131.4 488.2C144.5 490.1 153.6 502.2 151.8 515.4C150 528.6 137.8 537.6 124.6 535.8L116.1 534.6C77.4 529 47 498.6 41.5 459.9L40.3 451.4C38.4 438.3 47.5 426.1 60.7 424.2z"/></svg><span class="home-t">Home</span></a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li><li class="dl dl-nav"><button class="dl-trigger navdl" type="button" id="dl-btn-3" aria-haspopup="menu" aria-expanded="false" aria-controls="dl-menu-3">Download<svg class="i-chev" viewBox="0 0 448 512" aria-hidden="true"><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></button><ul class="dl-menu" id="dl-menu-3" role="menu" hidden><li class="dl-head" role="presentation">Download</li><li role="none"><a role="menuitem" href="docs/John%20Espino%20%C2%B7%20Curriculum%20Vitae%20(2026).pdf" target="_blank" rel="noopener"><span>CV</span><small><b class="fmt">PDF</b>1.9 MB</small></a></li><li role="none"><a role="menuitem" href="docs/John%20Espino%20%C2%B7%20Selected%20Work%20(2026).pdf" target="_blank" rel="noopener"><span>Selected Work</span><small><b class="fmt">PDF</b>78 MB</small></a></li></ul></li></ul><div class="actions"><button class="theme" type="button" id="theme-toggle" aria-label="Switch theme" title="Toggle theme"><svg class="moon" viewBox="0 0 640 640" aria-hidden="true"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg><svg class="sun" viewBox="0 0 640 640" aria-hidden="true"><path d="M288 144L288 96C288 78.3 302.3 64 320 64C337.7 64 352 78.3 352 96L352 144C352 161.7 337.7 176 320 176C302.3 176 288 161.7 288 144zM224 320C224 267 267 224 320 224C373 224 416 267 416 320C416 373 373 416 320 416C267 416 224 373 224 320zM64 320C64 302.3 78.3 288 96 288L144 288C161.7 288 176 302.3 176 320C176 337.7 161.7 352 144 352L96 352C78.3 352 64 337.7 64 320zM496 288L544 288C561.7 288 576 302.3 576 320C576 337.7 561.7 352 544 352L496 352C478.3 352 464 337.7 464 320C464 302.3 478.3 288 496 288zM320 576C302.3 576 288 561.7 288 544L288 496C288 478.3 302.3 464 320 464C337.7 464 352 478.3 352 496L352 544C352 561.7 337.7 576 320 576zM137.4 502.6C124.9 490.1 124.9 469.8 137.4 457.3L169.4 425.3C181.9 412.8 202.2 412.8 214.7 425.3C227.2 437.8 227.2 458.1 214.7 470.6L182.7 502.6C170.2 515.1 149.9 515.1 137.4 502.6zM425.4 169.3L457.4 137.3C469.9 124.8 490.2 124.8 502.7 137.3C515.2 149.8 515.2 170.1 502.7 182.6L470.7 214.6C458.2 227.1 437.9 227.1 425.4 214.6C412.9 202.1 412.9 181.8 425.4 169.3zM502.7 502.6C490.2 515.1 469.9 515.1 457.4 502.6L425.4 470.6C412.9 458.1 412.9 437.8 425.4 425.3C437.9 412.8 458.2 412.8 470.7 425.3L502.7 457.3C515.2 469.8 515.2 490.1 502.7 502.6zM169.4 214.6L137.4 182.6C124.9 170.1 124.9 149.8 137.4 137.3C149.9 124.8 170.2 124.8 182.7 137.3L214.7 169.3C227.2 181.8 227.2 202.1 214.7 214.6C202.2 227.1 181.9 227.1 169.4 214.6z"/></svg></button><a class="navcta" href="mailto:john@jkspn.xyz" data-contact>Get in Touch</a></div></div></nav>
+<main id="main">
+<header class="hero" id="top"><div class="wrap">
+<div class="top">
+<img class="photo" src="assets/photo.png" width="96" height="96" alt="Portrait of John Kevin Espino">
+<h1>John Kevin Espino</h1>
+<p class="tagline">Product · Marketing · Design</p>
+</div>
+<hr class="divider">
+<p class="intro" id="about"><span class="lede">I work at the intersection of product, marketing, and design.</span><span class="rest">Over 10+ years across Web3, AI, and data, I’ve turned complex technology into products people understand and want: I shape the message, lead go-to-market, and design what ships. I’ve grown communities from 30,000 to 80,000+ and built a 50,000-person launch waitlist, coordinating teams, agencies, and partners along the way.</span></p>
+<div class="cta">
+<a class="btn solid big cta-pencil" href="mailto:john@jkspn.xyz" data-contact><span class="lbl">Get in Touch</span><span class="draw"><span class="ink"></span><svg class="pen" viewBox="0 0 640 640" aria-hidden="true"><path d="M100.4 417.2C104.5 402.6 112.2 389.3 123 378.5L304.2 197.3L338.1 163.4C354.7 180 389.4 214.7 442.1 267.4L476 301.3L442.1 335.2L260.9 516.4C250.2 527.1 236.8 534.9 222.2 539L94.4 574.6C86.1 576.9 77.1 574.6 71 568.4C64.9 562.2 62.6 553.3 64.9 545L100.4 417.2zM156 413.5C151.6 418.2 148.4 423.9 146.7 430.1L122.6 517L209.5 492.9C215.9 491.1 221.7 487.8 226.5 483.2L155.9 413.5zM510 267.4C493.4 250.8 458.7 216.1 406 163.4L372 129.5C398.5 103 413.4 88.1 416.9 84.6C430.4 71 448.8 63.4 468 63.4C487.2 63.4 505.6 71 519.1 84.6L554.8 120.3C568.4 133.9 576 152.3 576 171.4C576 190.5 568.4 209 554.8 222.5C551.3 226 536.4 240.9 509.9 267.4z"/></svg></span></a>
+</div>
+</div></header>
 
-        <section id="skills">
-            <div class="wrap">
-                <div class="sec-title">
-                    <h2>Core Skills</h2>
-                </div>
-                <div class="skills">
-                    <div class="skill reveal">
-                        <h3>Product</h3>
-                        <ul class="sq">
-                            <li>Go-to-market strategy</li>
-                            <li>Positioning and messaging</li>
-                            <li>Product launches</li>
-                            <li>Product docs and demos</li>
-                        </ul>
-                    </div>
-                    <div class="skill reveal">
-                        <h3>Marketing</h3>
-                        <ul class="sq">
-                            <li>Community and social growth</li>
-                            <li>Content and paid campaigns</li>
-                            <li>PR and crisis communications</li>
-                            <li>Team and agency management</li>
-                        </ul>
-                    </div>
-                    <div class="skill reveal">
-                        <h3>Design</h3>
-                        <ul class="sq">
-                            <li>UI design</li>
-                            <li>UX and prototyping</li>
-                            <li>Brand and web design</li>
-                            <li>Motion and video</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="skills"><div class="wrap">
+<div class="sec-title"><h2>Core Skills</h2></div>
+<div class="skills"><div class="skill reveal"><h3>Product</h3><ul class="sq"><li>Go-to-market strategy</li><li>Positioning and messaging</li><li>Product launches</li><li>Product docs and demos</li></ul></div><div class="skill reveal"><h3>Marketing</h3><ul class="sq"><li>Community and social growth</li><li>Content and paid campaigns</li><li>PR and crisis communications</li><li>Team and agency management</li></ul></div><div class="skill reveal"><h3>Design</h3><ul class="sq"><li>UI design</li><li>UX and prototyping</li><li>Brand and web design</li><li>Motion and video</li></ul></div></div>
+</div></section>
 
-        <section id="experience">
-            <div class="wrap">
-                <div class="sec-title">
-                    <h2>Experience</h2>
-                </div>
-                <article class="entry reveal">
-                    <div class="head has-logo"><span class="logo" aria-hidden="true"><img
-                                src="assets/logos/benzimra.png" width="96" height="96" alt="" loading="lazy"></span>
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">Benzimra &amp; Co.</span></h3><span class="dates">Sep 2025 – May
-                                    2026</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>London, United Kingdom</span></p>
-                            <p class="desc"><i>Founder-led venture builder for crypto and Web3</i></p>
-                        </div>
-                    </div>
-                    <h4 class="role">Senior Project Manager &amp; UI/UX Designer (Contract)</h4>
-                    <ul class="sq">
-                        <li>Managed client relationships as primary contact and led delivery of a DeFi leverage product
-                            for Bitcoin based on the Kelly criterion.</li>
-                        <li>Built a 50,000 sign-up pre-launch waitlist and set up the product’s social accounts, growing
-                            X to 5,000 followers in the first month.</li>
-                        <li>Led Instagram user-generated content campaigns at launch and directed X and Meta ad creative
-                            with the growth manager.</li>
-                        <li>Designed UI/UX for the product and internal tools, including screens, flows, and both
-                            product and internal dashboards.</li>
-                    </ul>
-                </article>
-                <article class="entry reveal">
-                    <div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/Nuklai.png"
-                                width="96" height="96" alt="" loading="lazy"></span>
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">Nuklai</span></h3><span class="dates">Mar 2025 – Jul 2026</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>Utrecht, The Netherlands</span></p>
-                            <p class="desc"><i>AI and data management company unifying fragmented corporate data for
-                                    AI-driven decisions</i></p>
-                        </div>
-                    </div>
-                    <h4 class="role">Senior Marketing Manager</h4>
-                    <ul class="sq">
-                        <li>Led go-to-market for Nexus, the flagship AI layer for enterprise data: brand and product
-                            messaging, marketing website, launch campaigns and creatives, PR, and documentation.</li>
-                        <li>Designed the UI and led launch marketing for a staking platform, including creative assets
-                            and tutorials.</li>
-                        <li>Led a full brand refresh: redesigned the website, logo assets, and social media templates
-                            for stills and graphics.</li>
-                        <li>Grew social following from 20,000 to 50,000 with head-of-marketing scope, managing a small
-                            team, PR agencies, and KOL partnerships.</li>
-                    </ul>
-                </article>
-                <article class="entry reveal multi">
-                    <div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/Nexera.png"
-                                width="96" height="96" alt="" loading="lazy"></span>
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">Nexera <small>(formerly AllianceBlock)</small></span></h3><span
-                                    class="dates">Jul 2021 – Sep 2025</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>Zug, Switzerland</span></p>
-                            <p class="desc"><i>Web3 infrastructure for tokenizing real-world assets and compliant
-                                    DeFi</i></p>
-                        </div>
-                    </div>
-                    <div class="rolebox">
-                        <h4 class="role">Head of Communications<span>Jan 2023 – Sep 2025</span></h4>
-                        <ul class="sq">
-                            <li>Led internal and external communications across social media, website, and agency and
-                                partner relationships, managing teams.</li>
-                            <li>Ran marketing logistics and operations, coordinating creatives and Business Development
-                                and handling campaign sign-offs.</li>
-                            <li>Led crisis communications for two security incidents affecting token price stability,
-                                aligning messaging across Support, Product/Engineering, and BD/Sales.</li>
-                            <li>Partnered with Support to streamline the flow of information from tickets to internal
-                                teams and out to public announcements and documentation.</li>
-                        </ul>
-                    </div>
-                    <div class="rolebox">
-                        <h4 class="role">Head of Community Marketing / Investor Communications<span>Apr 2022 – Dec
-                                2022</span></h4>
-                        <ul class="sq">
-                            <li>Led all initiatives around the ALBT (now NXRA) token and marketing for DeFi launches:
-                                Liquidity Mining as a Service, Nexera Exchange (DEX), and Nexera Finance, the precursor
-                                to the end-to-end tokenization product.</li>
-                            <li>Owned product messaging and launch campaigns, and worked with PR on press releases, KOL
-                                activations, and a trading competition.</li>
-                            <li>Grew social following from 30,000 to 80,000+ and delivered investor and community
-                                updates through newsletters, blog articles, and social channels.</li>
-                            <li>Marketing point of contact for development teams, turning technical documentation into
-                                product messaging, demos, launch videos, and UI animations.</li>
-                        </ul>
-                    </div>
-                    <div class="rolebox">
-                        <h4 class="role">Design Lead<span>Jul 2021 – Mar 2022</span></h4>
-                        <ul class="sq">
-                            <li>Produced all marketing design for social, web, blog, and press releases, and supported
-                                Business Development with presentations, demos, and conference materials.</li>
-                            <li>Designed and developed three website relaunches spanning the rebrand from AllianceBlock
-                                to Nexera, creating custom brand assets.</li>
-                            <li>Designed UI for several products and aligned with other UI designers to unify the visual
-                                brand.</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="entry reveal">
-                    <div class="head has-logo"><span class="logo" aria-hidden="true"><img
-                                src="assets/logos/firstlook-sm.png" width="96" height="96" alt="" loading="lazy"></span>
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">FirstLook Venture Co.</span></h3><span class="dates">Jan 2020 –
-                                    Mar 2024</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>New York, United States of America</span></p>
-                            <p class="desc"><i>Early-stage venture firm investing in high-growth consumer packaged goods
-                                    (CPG) brands</i></p>
-                        </div>
-                    </div>
-                    <h4 class="role">Technical Lead</h4>
-                    <ul class="sq">
-                        <li>Joined as the first technical lead across product, marketing, and design, later continuing
-                            as an ongoing consultant.</li>
-                        <li>Built the company website and integrated payment, sign-up, and subscription flows for the
-                            investor platform.</li>
-                        <li>Set up investor data infrastructure, sourced brands for the physical sample boxes, and
-                            created a data room per brand; designed templates and marketing assets for the launch and
-                            first two years.</li>
-                    </ul>
-                </article>
-                <article class="entry reveal">
-                    <div class="head">
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">Manic Nightnings Productions</span></h3><span class="dates">2014 –
-                                    2019</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>Philippines</span></p>
-                            <p class="desc"><i>Events management, logistics and full-scale production outfit</i></p>
-                        </div>
-                    </div>
-                    <h4 class="role">Creative Director for Visual Marketing</h4>
-                    <ul class="sq">
-                        <li>Produced visual marketing for recurring music festivals (including Carte Blanche and
-                            Arcadia) drawing up to about 10,000 attendees with local and international DJs, plus smaller
-                            partner events.</li>
-                        <li>Created video, motion, and print and digital collateral, and served as technical director
-                            during events and as liaison for partners, sponsors, and other organizations before and
-                            during each event.</li>
-                        <li>Supported government festival management across several events, creating print and digital
-                            materials for each.</li>
-                        <li>Managed end-to-end delivery of international conferences involving heads of state,
-                            coordinating USAID, Jhpiego and other stakeholders across registration (including QR-based
-                            IDs), venue, catering, and event materials, plus recap videos and delegate materials.</li>
-                        <li>Clients included USAID, World Health Organization, DAI, Jhpiego, Department of Health, and
-                            the City Government of Davao.</li>
-                    </ul>
-                </article>
-                <article class="entry reveal">
-                    <div class="head">
-                        <div class="head-main">
-                            <header>
-                                <h3><span class="org">Beta Digital Design Services</span></h3><span class="dates">2012 –
-                                    Present</span>
-                            </header>
-                            <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                                </svg><span>Remote</span></p>
-                            <p class="desc"><i>Personal design and web studio</i></p>
-                        </div>
-                    </div>
-                    <h4 class="role">Independent / Freelance Designer &amp; Web Builder</h4>
-                    <ul class="sq">
-                        <li>Delivered branding, websites, and campaign materials for non-profit and advocacy
-                            organizations, including The Climate Reality Project (Philippines), Living Laudato Si’
-                            Philippines, and Earth Day Network Philippines.</li>
-                        <li>Led design and communications for the ASEAN Peace Project, a youth accelerator for peace and
-                            environmental action across Southeast Asia, including its website and conference materials;
-                            its programs won YSEALI Seeds for the Future grants (2015 and 2016).</li>
-                        <li>Produced brand, event, and motion materials for the Kadayawan Festival, working directly
-                            with the City Government of Davao.</li>
-                        <li>Designed promotions, in-mall activations, and billboards for SM Supermalls and Ayala Malls,
-                            plus brand collateral for the Aboitiz Group and Aboitiz Power Corporation.</li>
-                        <li>Redesigned and built the website for CoinPass, a UK-based exchange platform.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+<section id="experience"><div class="wrap">
+<div class="sec-title"><h2>Experience</h2></div>
+<article class="entry reveal"><div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/benzimra.png" width="96" height="96" alt="" loading="lazy"></span><div class="head-main"><header><h3><span class="org">Benzimra &amp; Co.</span></h3><span class="dates">Sep 2025 – May 2026</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>London, United Kingdom</span></p><p class="desc"><i>Founder-led venture builder for crypto and Web3</i></p></div></div><h4 class="role">Senior Project Manager &amp; UI/UX Designer (Contract)</h4><ul class="sq"><li>Managed client relationships as primary contact and led delivery of a DeFi leverage product for Bitcoin based on the Kelly criterion.</li><li>Built a 50,000 sign-up pre-launch waitlist and set up the product’s social accounts, growing X to 5,000 followers in the first month.</li><li>Led Instagram user-generated content campaigns at launch and directed X and Meta ad creative with the growth manager.</li><li>Designed UI/UX for the product and internal tools, including screens, flows, and both product and internal dashboards.</li></ul></article><article class="entry reveal"><div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/Nuklai.png" width="96" height="96" alt="" loading="lazy"></span><div class="head-main"><header><h3><span class="org">Nuklai</span></h3><span class="dates">Mar 2025 – Jul 2026</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Utrecht, The Netherlands</span></p><p class="desc"><i>AI and data management company unifying fragmented corporate data for AI-driven decisions</i></p></div></div><h4 class="role">Senior Marketing Manager</h4><ul class="sq"><li>Led go-to-market for Nexus, the flagship AI layer for enterprise data: brand and product messaging, marketing website, launch campaigns and creatives, PR, and documentation.</li><li>Designed the UI and led launch marketing for a staking platform, including creative assets and tutorials.</li><li>Led a full brand refresh: redesigned the website, logo assets, and social media templates for stills and graphics.</li><li>Grew social following from 20,000 to 50,000 with head-of-marketing scope, managing a small team, PR agencies, and KOL partnerships.</li></ul></article><article class="entry reveal multi"><div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/Nexera.png" width="96" height="96" alt="" loading="lazy"></span><div class="head-main"><header><h3><span class="org">Nexera <small>(formerly AllianceBlock)</small></span></h3><span class="dates">Jul 2021 – Sep 2025</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Zug, Switzerland</span></p><p class="desc"><i>Web3 infrastructure for tokenizing real-world assets and compliant DeFi</i></p></div></div><div class="rolebox"><h4 class="role">Head of Communications<span>Jan 2023 – Sep 2025</span></h4><ul class="sq"><li>Led internal and external communications across social media, website, and agency and partner relationships, managing teams.</li><li>Ran marketing logistics and operations, coordinating creatives and Business Development and handling campaign sign-offs.</li><li>Led crisis communications for two security incidents affecting token price stability, aligning messaging across Support, Product/Engineering, and BD/Sales.</li><li>Partnered with Support to streamline the flow of information from tickets to internal teams and out to public announcements and documentation.</li></ul></div><div class="rolebox"><h4 class="role">Head of Community Marketing / Investor Communications<span>Apr 2022 – Dec 2022</span></h4><ul class="sq"><li>Led all initiatives around the ALBT (now NXRA) token and marketing for DeFi launches: Liquidity Mining as a Service, Nexera Exchange (DEX), and Nexera Finance, the precursor to the end-to-end tokenization product.</li><li>Owned product messaging and launch campaigns, and worked with PR on press releases, KOL activations, and a trading competition.</li><li>Grew social following from 30,000 to 80,000+ and delivered investor and community updates through newsletters, blog articles, and social channels.</li><li>Marketing point of contact for development teams, turning technical documentation into product messaging, demos, launch videos, and UI animations.</li></ul></div><div class="rolebox"><h4 class="role">Design Lead<span>Jul 2021 – Mar 2022</span></h4><ul class="sq"><li>Produced all marketing design for social, web, blog, and press releases, and supported Business Development with presentations, demos, and conference materials.</li><li>Designed and developed three website relaunches spanning the rebrand from AllianceBlock to Nexera, creating custom brand assets.</li><li>Designed UI for several products and aligned with other UI designers to unify the visual brand.</li></ul></div></article><article class="entry reveal"><div class="head has-logo"><span class="logo" aria-hidden="true"><img src="assets/logos/firstlook-sm.png" width="96" height="96" alt="" loading="lazy"></span><div class="head-main"><header><h3><span class="org">FirstLook Venture Co.</span></h3><span class="dates">Jan 2020 – Mar 2024</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>New York, United States of America</span></p><p class="desc"><i>Early-stage venture firm investing in high-growth consumer packaged goods (CPG) brands</i></p></div></div><h4 class="role">Technical Lead</h4><ul class="sq"><li>Joined as the first technical lead across product, marketing, and design, later continuing as an ongoing consultant.</li><li>Built the company website and integrated payment, sign-up, and subscription flows for the investor platform.</li><li>Set up investor data infrastructure, sourced brands for the physical sample boxes, and created a data room per brand; designed templates and marketing assets for the launch and first two years.</li></ul></article><article class="entry reveal"><div class="head"><div class="head-main"><header><h3><span class="org">Manic Nightnings Productions</span></h3><span class="dates">2014 – 2019</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Philippines</span></p><p class="desc"><i>Events management, logistics and full-scale production outfit</i></p></div></div><h4 class="role">Creative Director for Visual Marketing</h4><ul class="sq"><li>Produced visual marketing for recurring music festivals (including Carte Blanche and Arcadia) drawing up to about 10,000 attendees with local and international DJs, plus smaller partner events.</li><li>Created video, motion, and print and digital collateral, and served as technical director during events and as liaison for partners, sponsors, and other organizations before and during each event.</li><li>Supported government festival management across several events, creating print and digital materials for each.</li><li>Managed end-to-end delivery of international conferences involving heads of state, coordinating USAID, Jhpiego and other stakeholders across registration (including QR-based IDs), venue, catering, and event materials, plus recap videos and delegate materials.</li><li>Clients included USAID, World Health Organization, DAI, Jhpiego, Department of Health, and the City Government of Davao.</li></ul></article><article class="entry reveal"><div class="head"><div class="head-main"><header><h3><span class="org">Beta Digital Design Services</span></h3><span class="dates">2012 – Present</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Remote</span></p><p class="desc"><i>Personal design and web studio</i></p></div></div><h4 class="role">Independent / Freelance Designer &amp; Web Builder</h4><ul class="sq"><li>Delivered branding, websites, and campaign materials for non-profit and advocacy organizations, including The Climate Reality Project (Philippines), Living Laudato Si’ Philippines, and Earth Day Network Philippines.</li><li>Led design and communications for the ASEAN Peace Project, a youth accelerator for peace and environmental action across Southeast Asia, including its website and conference materials; its programs won YSEALI Seeds for the Future grants (2015 and 2016).</li><li>Produced brand, event, and motion materials for the Kadayawan Festival, working directly with the City Government of Davao.</li><li>Designed promotions, in-mall activations, and billboards for SM Supermalls and Ayala Malls, plus brand collateral for the Aboitiz Group and Aboitiz Power Corporation.</li><li>Redesigned and built the website for CoinPass, a UK-based exchange platform.</li></ul></article>
+</div></section>
 
-        <section id="education">
-            <div class="wrap">
-                <div class="sec-title">
-                    <h2>Education</h2>
-                </div>
-                <article class="entry reveal">
-                    <header>
-                        <h3><span class="org">Bachelor of Arts in Mass Communication</span></h3><span class="dates">2014
-                            – 2018</span>
-                    </header>
-                    <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                            <path
-                                d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                        </svg><span>Philippines · <i>Ateneo de Davao University</i></span></p>
-                </article>
-                <article class="entry reveal">
-                    <header>
-                        <h3><span class="org">Bachelor of Science in Electronics Engineering</span></h3><span
-                            class="dates">2008 – 2014</span>
-                    </header>
-                    <p class="where"><svg viewBox="0 0 640 640" aria-hidden="true">
-                            <path
-                                d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z" />
-                        </svg><span>Philippines · <i>Ateneo de Davao University</i> · <i>Coursework</i></span></p>
-                </article>
-            </div>
-        </section>
+<section id="education"><div class="wrap">
+<div class="sec-title"><h2>Education</h2></div>
+<article class="entry reveal"><header><h3><span class="org">Bachelor of Arts in Mass Communication</span></h3><span class="dates">2014 – 2018</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Philippines · <i>Ateneo de Davao University</i></span></p></article><article class="entry reveal"><header><h3><span class="org">Bachelor of Science in Electronics Engineering</span></h3><span class="dates">2008 – 2014</span></header><p class="where"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg><span>Philippines · <i>Ateneo de Davao University</i> · <i>Coursework</i></span></p></article>
+</div></section>
 
-        <section id="contact" class="closing">
-            <div class="wrap">
-                <div class="closing-card reveal">
-                    <h2>Let’s make something people understand and want.</h2>
-                    <p>Open to roles and projects where product, marketing, and design work together.</p>
-                    <div class="closing-cta"><a class="btn solid big cta-pencil" href="mailto:john@jkspn.xyz"
-                            data-contact><span class="lbl">Get in Touch</span><span class="draw"><span
-                                    class="ink"></span><svg class="pen" viewBox="0 0 640 640" aria-hidden="true">
-                                    <path
-                                        d="M100.4 417.2C104.5 402.6 112.2 389.3 123 378.5L304.2 197.3L338.1 163.4C354.7 180 389.4 214.7 442.1 267.4L476 301.3L442.1 335.2L260.9 516.4C250.2 527.1 236.8 534.9 222.2 539L94.4 574.6C86.1 576.9 77.1 574.6 71 568.4C64.9 562.2 62.6 553.3 64.9 545L100.4 417.2zM156 413.5C151.6 418.2 148.4 423.9 146.7 430.1L122.6 517L209.5 492.9C215.9 491.1 221.7 487.8 226.5 483.2L155.9 413.5zM510 267.4C493.4 250.8 458.7 216.1 406 163.4L372 129.5C398.5 103 413.4 88.1 416.9 84.6C430.4 71 448.8 63.4 468 63.4C487.2 63.4 505.6 71 519.1 84.6L554.8 120.3C568.4 133.9 576 152.3 576 171.4C576 190.5 568.4 209 554.8 222.5C551.3 226 536.4 240.9 509.9 267.4z" />
-                                </svg></span></a></div>
-                    <div class="icons"><a class="icon-btn" href="https://x.com/jkspn" rel="me noopener" aria-label="X"
-                            title="X"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                <path
-                                    d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
-                            </svg></a><a class="icon-btn" href="https://linkedin.com/in/jkespino" rel="me noopener"
-                            aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                <path
-                                    d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z" />
-                            </svg></a><a class="icon-btn" href="https://t.me/jkspn" rel="me noopener"
-                            aria-label="Telegram" title="Telegram"><svg viewBox="0 0 640 640" aria-hidden="true">
-                                <path
-                                    d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM435 240.7C431.3 279.9 415.1 375.1 406.9 419C403.4 437.6 396.6 443.8 390 444.4C375.6 445.7 364.7 434.9 350.7 425.7C328.9 411.4 316.5 402.5 295.4 388.5C270.9 372.4 286.8 363.5 300.7 349C304.4 345.2 367.8 287.5 369 282.3C369.2 281.6 369.3 279.2 367.8 277.9C366.3 276.6 364.2 277.1 362.7 277.4C360.5 277.9 325.6 300.9 258.1 346.5C248.2 353.3 239.2 356.6 231.2 356.4C222.3 356.2 205.3 351.4 192.6 347.3C177.1 342.3 164.7 339.6 165.8 331C166.4 326.5 172.5 322 184.2 317.3C256.5 285.8 304.7 265 328.8 255C397.7 226.4 412 221.4 421.3 221.2C423.4 221.2 427.9 221.7 430.9 224.1C432.9 225.8 434.1 228.2 434.4 230.8C434.9 234 435 237.3 434.8 240.6z" />
-                            </svg></a></div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="wrap">
-            <div class="foot"><span>© <span id="year">2026</span> John Kevin Espino</span><span class="foot-r">Product ·
-                    Marketing · Design<a class="totop" href="#top" aria-label="Back to top" title="Back to top"><svg
-                            viewBox="0 0 384 512" aria-hidden="true">
-                            <path
-                                d="M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-                        </svg></a></span></div>
-        </div>
-    </footer>
-    <dialog id="contact-dialog" aria-labelledby="cd-title">
-        <form method="dialog" id="contact-form" novalidate>
-            <div class="cd-head">
-                <h2 id="cd-title">Get in Touch</h2><button type="button" class="cd-close" id="cd-close"
-                    aria-label="Close" title="Close"><svg viewBox="0 0 384 512" aria-hidden="true">
-                        <path
-                            d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
-                    </svg></button>
-            </div>
-            <p class="cd-note">Tell me a little about what you have in mind. I read every message and reply personally.
-            </p>
-            <label for="cf-name">Your name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required
-                placeholder="What should I call you?">
-            <label for="cf-subject">Subject</label>
-            <input id="cf-subject" name="subject" type="text" placeholder="What’s on your mind?">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="6" required
-                placeholder="Hi John, I’d love to chat about…"></textarea>
-            <div class="cd-status" id="cd-status" role="status" aria-live="polite" hidden></div>
-            <div class="cd-actions">
-                <div class="dl"><button class="dl-trigger labeled" type="button" id="dl-btn-2"
-                        data-tip="Download CV and portfolio (PDF)" aria-haspopup="menu" aria-expanded="false"
-                        aria-controls="dl-menu-2"><svg class="i-pdf" viewBox="0 0 640 640" aria-hidden="true">
-                            <path
-                                d="M304 112L192 112C183.2 112 176 119.2 176 128L176 512C176 520.8 183.2 528 192 528L448 528C456.8 528 464 520.8 464 512L464 272L376 272C336.2 272 304 239.8 304 200L304 112zM444.1 224L352 131.9L352 200C352 213.3 362.7 224 376 224L444.1 224zM128 128C128 92.7 156.7 64 192 64L325.5 64C342.5 64 358.8 70.7 370.8 82.7L493.3 205.3C505.3 217.3 512 233.6 512 250.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128z" />
-                        </svg><span>Download</span><svg class="i-chev" viewBox="0 0 448 512" aria-hidden="true">
-                            <path
-                                d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                        </svg></button>
-                    <ul class="dl-menu up" id="dl-menu-2" role="menu" hidden>
-                        <li class="dl-head" role="presentation">Download</li>
-                        <li role="none"><a role="menuitem"
-                                href="docs/John%20Espino%20%C2%B7%20Curriculum%20Vitae%20(2026).pdf" target="_blank"
-                                rel="noopener"><span>CV</span><small><b class="fmt">PDF</b>1.9 MB</small></a></li>
-                        <li role="none"><a role="menuitem"
-                                href="docs/John%20Espino%20%C2%B7%20Selected%20Work%20(2026).pdf" target="_blank"
-                                rel="noopener"><span>Selected Work</span><small><b class="fmt">PDF</b>78 MB</small></a>
-                        </li>
-                    </ul>
-                </div><button type="submit" class="btn solid">Send</button>
-            </div>
-        </form>
-    </dialog>
-    <script src="script.js" defer></script>
+<section id="contact" class="closing"><div class="wrap">
+<div class="closing-card reveal">
+<h2>Let’s make something people understand and want.</h2>
+<p>Open to roles and projects where product, marketing, and design work together.</p>
+<div class="closing-cta"><a class="btn solid big cta-pencil" href="mailto:john@jkspn.xyz" data-contact><span class="lbl">Get in Touch</span><span class="draw"><span class="ink"></span><svg class="pen" viewBox="0 0 640 640" aria-hidden="true"><path d="M100.4 417.2C104.5 402.6 112.2 389.3 123 378.5L304.2 197.3L338.1 163.4C354.7 180 389.4 214.7 442.1 267.4L476 301.3L442.1 335.2L260.9 516.4C250.2 527.1 236.8 534.9 222.2 539L94.4 574.6C86.1 576.9 77.1 574.6 71 568.4C64.9 562.2 62.6 553.3 64.9 545L100.4 417.2zM156 413.5C151.6 418.2 148.4 423.9 146.7 430.1L122.6 517L209.5 492.9C215.9 491.1 221.7 487.8 226.5 483.2L155.9 413.5zM510 267.4C493.4 250.8 458.7 216.1 406 163.4L372 129.5C398.5 103 413.4 88.1 416.9 84.6C430.4 71 448.8 63.4 468 63.4C487.2 63.4 505.6 71 519.1 84.6L554.8 120.3C568.4 133.9 576 152.3 576 171.4C576 190.5 568.4 209 554.8 222.5C551.3 226 536.4 240.9 509.9 267.4z"/></svg></span></a></div>
+<div class="icons"><a class="icon-btn" href="https://x.com/jkspn" rel="me noopener" aria-label="X" title="X"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg></a><a class="icon-btn" href="https://linkedin.com/in/jkspn" rel="me noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a><a class="icon-btn" href="https://t.me/jkspn" rel="me noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 640 640" aria-hidden="true"><path d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM435 240.7C431.3 279.9 415.1 375.1 406.9 419C403.4 437.6 396.6 443.8 390 444.4C375.6 445.7 364.7 434.9 350.7 425.7C328.9 411.4 316.5 402.5 295.4 388.5C270.9 372.4 286.8 363.5 300.7 349C304.4 345.2 367.8 287.5 369 282.3C369.2 281.6 369.3 279.2 367.8 277.9C366.3 276.6 364.2 277.1 362.7 277.4C360.5 277.9 325.6 300.9 258.1 346.5C248.2 353.3 239.2 356.6 231.2 356.4C222.3 356.2 205.3 351.4 192.6 347.3C177.1 342.3 164.7 339.6 165.8 331C166.4 326.5 172.5 322 184.2 317.3C256.5 285.8 304.7 265 328.8 255C397.7 226.4 412 221.4 421.3 221.2C423.4 221.2 427.9 221.7 430.9 224.1C432.9 225.8 434.1 228.2 434.4 230.8C434.9 234 435 237.3 434.8 240.6z"/></svg></a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><span>© <span id="year">2026</span> John Kevin Espino</span><span class="foot-r">Product · Marketing · Design<a class="totop" href="#top" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a></span></div></div></footer>
+<dialog id="contact-dialog" aria-labelledby="cd-title">
+<form method="dialog" id="contact-form" novalidate>
+<div class="cd-head"><h2 id="cd-title">Get in Touch</h2><button type="button" class="cd-close" id="cd-close" aria-label="Close" title="Close"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></button></div>
+<p class="cd-note">Tell me a little about what you have in mind. I read every message and reply personally.</p>
+<label for="cf-name">Your name</label>
+<input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="What should I call you?">
+<label for="cf-subject">Subject</label>
+<input id="cf-subject" name="subject" type="text" placeholder="What’s on your mind?">
+<label for="cf-message">Message</label>
+<textarea id="cf-message" name="message" rows="6" required placeholder="Hi John, I’d love to chat about…"></textarea>
+<div class="cd-status" id="cd-status" role="status" aria-live="polite" hidden></div>
+<div class="cd-actions"><div class="dl"><button class="dl-trigger labeled" type="button" id="dl-btn-2" data-tip="Download CV and portfolio (PDF)" aria-haspopup="menu" aria-expanded="false" aria-controls="dl-menu-2"><svg class="i-pdf" viewBox="0 0 640 640" aria-hidden="true"><path d="M304 112L192 112C183.2 112 176 119.2 176 128L176 512C176 520.8 183.2 528 192 528L448 528C456.8 528 464 520.8 464 512L464 272L376 272C336.2 272 304 239.8 304 200L304 112zM444.1 224L352 131.9L352 200C352 213.3 362.7 224 376 224L444.1 224zM128 128C128 92.7 156.7 64 192 64L325.5 64C342.5 64 358.8 70.7 370.8 82.7L493.3 205.3C505.3 217.3 512 233.6 512 250.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128z"/></svg><span>Download</span><svg class="i-chev" viewBox="0 0 448 512" aria-hidden="true"><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></button><ul class="dl-menu up" id="dl-menu-2" role="menu" hidden><li class="dl-head" role="presentation">Download</li><li role="none"><a role="menuitem" href="docs/John%20Espino%20%C2%B7%20Curriculum%20Vitae%20(2026).pdf" target="_blank" rel="noopener"><span>CV</span><small><b class="fmt">PDF</b>1.9 MB</small></a></li><li role="none"><a role="menuitem" href="docs/John%20Espino%20%C2%B7%20Selected%20Work%20(2026).pdf" target="_blank" rel="noopener"><span>Selected Work</span><small><b class="fmt">PDF</b>78 MB</small></a></li></ul></div><button type="submit" class="btn solid">Send</button></div>
+</form>
+</dialog>
+<script src="script.js" defer></script>
 </body>
-
 </html>
