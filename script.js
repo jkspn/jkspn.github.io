@@ -3,9 +3,10 @@
   var d=document,root=d.documentElement;
   root.classList.add('js');
   var tb=d.getElementById('theme-toggle');
+  /* Follows the device theme on every load; the button only flips it for the current visit (nothing is saved). */
   function cur(){var a=root.getAttribute('data-theme');if(a)return a;return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
   function label(){if(tb)tb.setAttribute('aria-label','Switch to '+(cur()==='dark'?'light':'dark')+' theme');}
-  if(tb){label();tb.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}label();});}
+  if(tb){label();tb.addEventListener('click',function(){root.setAttribute('data-theme',cur()==='dark'?'light':'dark');label();});}
   var fn=d.getElementById('float-nav');
   if(fn){
     var pill=fn.querySelector('.pill'),ph=fn.querySelector('.navphoto'),mb=d.getElementById('menu-btn'),on=null;
