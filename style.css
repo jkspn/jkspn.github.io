@@ -38,7 +38,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 /* nav: links left, theme + CTA right at the top; a centered, hugging, fully rounded pill (with photo) once you scroll */
 .float{position:fixed;top:.9rem;left:50%;transform:translateX(-50%);z-index:10;width:min(calc(var(--measure) - 3rem),calc(100vw - 1.2rem));display:flex;justify-content:center;pointer-events:none}
 .pill{pointer-events:auto;position:relative;display:flex;align-items:center;width:100%;padding:.35rem 0;border:1px solid transparent;border-radius:999px;background:transparent;transition:width .4s ease,padding .4s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease}
-.float.scrolled .pill{width:var(--hugw,auto);padding:.35rem;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-color:var(--rule);box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.float.scrolled .pill{width:var(--hugw,auto);padding:.35rem;background:color-mix(in srgb,var(--bg) 96%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-color:var(--rule);box-shadow:0 4px 18px rgba(0,0,0,.08)}
 @media (prefers-reduced-motion:reduce){.pill{transition:none}}
 .navphoto{display:block;flex:none;width:0;height:2.1rem;margin-right:0;border-radius:50%;overflow:hidden;opacity:0;visibility:hidden;border:0 solid var(--rule);transition:width .3s ease,margin .3s ease,opacity .25s ease,visibility 0s linear .3s}
 .navphoto img{width:2.1rem;height:2.1rem;object-fit:cover;display:block}
@@ -118,8 +118,10 @@ ul.sq li::before{content:"";position:absolute;left:0;top:.62em;width:.28rem;heig
 
 .entry{padding-top:2.75rem}
 .entry:first-of-type{padding-top:0}
-.head{display:flex;gap:.9rem;align-items:flex-start}
-@media (min-width:62rem){.head{display:block;position:relative}.head .logo{position:absolute;left:-3.9rem;top:.05rem}}
+.head{display:flex;gap:.9rem;align-items:flex-start;position:sticky;top:3.85rem;z-index:4;background:var(--bg);padding:.6rem 0 .5rem}
+.head::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:1.1rem;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.head::after{content:"";position:absolute;left:0;right:0;top:100%;height:.7rem;background:linear-gradient(var(--bg),transparent);pointer-events:none}
+@media (min-width:62rem){.head{display:block;box-shadow:-4.6rem 0 0 var(--bg)}.head::before{left:-4.6rem}.head .logo{position:absolute;left:-3.9rem;top:.65rem}}
 .head-main{flex:1;min-width:0}
 .logo{position:relative;flex:none;width:2.9rem;height:2.9rem;border-radius:var(--r);border:0;background:var(--panel);display:grid;place-items:center;overflow:hidden;color:var(--accent);font-size:1.2rem}
 .logo b{font-weight:400}
@@ -312,3 +314,6 @@ dialog{overflow:visible}
   .links .dl-menu a{border:1px solid transparent}
   .links .dl-menu a:hover,.links .dl-menu a:focus-visible,.links .dl-menu a:active{background:var(--bg);border-color:var(--rule)}
 }
+
+/* page content fades out under the nav area instead of flowing behind it */
+@media (max-width:720px){.foot{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.6rem}.foot-r{justify-content:center}}
