@@ -96,7 +96,17 @@
     links.forEach(function(a){a.removeAttribute('aria-current')});
     if(map[cur])map[cur].setAttribute('aria-current','true');
   };
-  setActive();
+  var heads=[].slice.call(document.querySelectorAll('.head'));
+  var chkStuck=function(){
+    var top=parseFloat(getComputedStyle(document.documentElement).fontSize)*3.85,s=false;
+    heads.forEach(function(h){
+      var r=h.getBoundingClientRect(),e=h.parentNode.getBoundingClientRect();
+      if(r.top<=top+1&&e.bottom>top+r.height*0.5)s=true;
+    });
+    document.body.classList.toggle('stuck',s);
+  };
+  setActive();chkStuck();
+  window.addEventListener('scroll',chkStuck,{passive:true});
   window.addEventListener('scroll',setActive,{passive:true});
   window.addEventListener('resize',setActive);
 })();
