@@ -2,11 +2,30 @@
 (function () {
   var d = document, root = d.documentElement;
   root.classList.add('js');
-  var tb = d.getElementById('theme-toggle');
-  /* Follows the device theme on every load; the button only flips it for the current visit (nothing is saved). */
-  function cur() { var a = root.getAttribute('data-theme'); if (a) return a; return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-  function label() { if (tb) tb.setAttribute('aria-label', 'Switch to ' + (cur() === 'dark' ? 'light' : 'dark') + ' theme'); }
-  if (tb) { label(); tb.addEventListener('click', function () { root.setAttribute('data-theme', cur() === 'dark' ? 'light' : 'dark'); label(); }); }
+  /* Theme: Light / System / Dark. System (the default) follows the device; a manual pick is remembered on this device. */
+  var sw = d.getElementById('theme-switch');
+  if (sw) {
+    var opts = [].slice.call(sw.querySelectorAll('button'));
+    var saved = 'system';
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') saved = t; } catch (e) { }
+    var canHover = window.matchMedia && window.matchMedia('(hover:hover)').matches;
+    var paint = function (v) { opts.forEach(function (b) { b.setAttribute('aria-checked', b.getAttribute('data-theme-pref') === v ? 'true' : 'false'); }); };
+    var apply = function (v) {
+      if (v === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', v);
+      try { if (v === 'system') localStorage.removeItem('theme'); else localStorage.setItem('theme', v); } catch (e) { }
+      paint(v);
+    };
+    paint(saved);
+    opts.forEach(function (b) {
+      b.addEventListener('click', function () {
+        /* on touch, the first tap just opens the switch; the next tap picks */
+        if (!canHover && !sw.classList.contains('open')) { sw.classList.add('open'); return; }
+        apply(b.getAttribute('data-theme-pref')); sw.classList.remove('open'); if (canHover) b.blur();
+      });
+    });
+    d.addEventListener('click', function (e) { if (!sw.contains(e.target)) sw.classList.remove('open'); });
+    sw.addEventListener('keydown', function (e) { if (e.key === 'Escape') { sw.classList.remove('open'); } });
+  }
   var fn = d.getElementById('float-nav');
   if (fn) {
     var pill = fn.querySelector('.pill'), ph = fn.querySelector('.navphoto'), mb = d.getElementById('menu-btn'), on = null;
@@ -108,4 +127,31 @@
   setActive();
   window.addEventListener('scroll', setActive, { passive: true });
   window.addEventListener('resize', setActive);
+})();
+
+/* analytics events (Analytiics). Best-effort, never blocks the page. */
+(function () {
+  var d = document;
+  function track(name, props) {
+    try {
+      var body = JSON.stringify({ events: [{ name: name, props: props || {}, url: location.href, ref: d.referrer }] });
+      if (navigator.sendBeacon) { navigator.sendBeacon('https://in.analytiics.co/v1/events', new Blob([body], { type: 'text/plain' })); return; }
+      fetch('https://in.analytiics.co/v1/events', { method: 'POST', body: body, headers: { 'Content-Type': 'text/plain' }, keepalive: true }).catch(function () { });
+    } catch (e) { }
+  }
+  d.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('a,button');
+    if (!t) return;
+    if (t.hasAttribute('data-contact')) {
+      var loc = t.classList.contains('navcta') ? 'navbar' : t.closest('header') ? 'hero' : 'footer';
+      track('contact_open', { location: loc });
+    } else if (t.id === 'cd-copy-email') {
+      track('copy_email');
+    } else if (t.type === 'submit' && t.closest('#contact-form')) {
+      track('contact_send');
+    } else if (t.tagName === 'A' && /\/?docs\//.test(t.getAttribute('href') || '')) {
+      var h = decodeURIComponent(t.getAttribute('href'));
+      track('download', { file: /Selected Work/.test(h) ? 'selected_work' : 'cv' });
+    }
+  }, true);
 })();

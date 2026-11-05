@@ -178,8 +178,11 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .pill {
-    transition: none
+
+  .pill,
+  .navphoto,
+  .navcta {
+    transition: none !important
   }
 }
 
@@ -206,7 +209,7 @@ button:focus-visible {
 
 .float.scrolled .navphoto {
   width: 2.1rem;
-  margin-right: 1.8rem;
+  margin-right: .5rem;
   opacity: 1;
   visibility: visible;
   border-width: 1px;
@@ -284,7 +287,6 @@ button:focus-visible {
 .actions {
   display: flex;
   align-items: center;
-  gap: .6rem;
   margin-left: 2.2rem
 }
 
@@ -296,19 +298,30 @@ button:focus-visible {
   background: var(--accent);
   color: var(--bg);
   border: 1px solid var(--accent);
-  border-radius: 8px;
+  border-radius: var(--r-s) 1.05rem 1.05rem var(--r-s);
   text-decoration: none;
   font-size: .95rem;
   white-space: nowrap;
-  transition: opacity .15s
+  overflow: hidden;
+  max-width: 12rem;
+  margin-left: .6rem;
+  transition: max-width .3s ease, padding .3s ease, margin .3s ease, border-width .3s ease, opacity .25s ease, visibility 0s
 }
 
 .navcta:hover {
   opacity: .88
 }
 
+/* revealed like the photo: grows in from nothing as the bar appears */
 .float:not(.scrolled) .navcta {
-  display: none
+  max-width: 0;
+  padding: 0;
+  margin-left: 0;
+  border-width: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: max-width .3s ease, padding .3s ease, margin .3s ease, border-width .3s ease, opacity .25s ease, visibility 0s linear .3s
 }
 
 .float.scrolled .navcta {
@@ -316,51 +329,99 @@ button:focus-visible {
   padding: 0 1.1rem 0 1rem
 }
 
-.theme {
+/* theme switch: shows the active choice; expands to light / system / dark on hover or focus */
+.themesw {
+  position: relative;
+  width: 2.1rem;
+  height: 2.1rem;
+  flex: none
+}
+
+.themesw-in {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 2.1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--panel);
+  z-index: 8;
+  transition: background .15s, border-color .15s
+}
+
+.themesw button {
   background: none;
   border: 0;
   color: var(--faint);
   width: 2.1rem;
-  height: 2.1rem;
-  border-radius: 8px;
+  height: calc(2.1rem - 2px);
+  margin: -1px 0;
+  border-radius: 999px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0
+  padding: 0;
+  flex: none;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-width .2s ease, opacity .15s
 }
 
-.theme:hover {
-  color: var(--ink);
-  background: var(--panel)
+.themesw button[aria-checked="true"] {
+  max-width: 2.1rem;
+  opacity: 1;
+  pointer-events: auto;
+  color: var(--ink)
 }
 
-.theme svg {
+.themesw svg {
   width: 1rem;
   height: 1rem;
   fill: currentColor;
-  opacity: .8
+  flex: none
 }
 
-.theme .moon {
-  display: none
+.themesw button:hover {
+  color: var(--ink)
 }
 
-:root[data-theme="dark"] .theme .moon {
-  display: block
+.themesw.open .themesw-in,
+.themesw:focus-within .themesw-in {
+  background: var(--panel);
+  border-color: var(--rule)
 }
 
-:root[data-theme="dark"] .theme .sun {
-  display: none
+.themesw.open button,
+.themesw:focus-within button {
+  max-width: 2.1rem;
+  opacity: 1;
+  pointer-events: auto
 }
 
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .theme .moon {
-    display: block
+.themesw.open button[aria-checked="true"],
+.themesw:focus-within button[aria-checked="true"] {
+  background: var(--rule)
+}
+
+@media (hover:hover) {
+  .themesw:hover .themesw-in {
+    background: var(--panel);
+    border-color: var(--rule)
   }
 
-  :root:not([data-theme="light"]) .theme .sun {
-    display: none
+  .themesw:hover button {
+    max-width: 2.1rem;
+    opacity: 1;
+    pointer-events: auto
+  }
+
+  .themesw:hover button[aria-checked="true"] {
+    background: var(--rule)
   }
 }
 
@@ -1921,5 +1982,12 @@ dialog {
 @media (hover:hover) {
   .links .dl-trigger.navdl[data-tip][aria-expanded="false"]:hover::after {
     transform: translate(-50%, 0)
+  }
+}
+
+/* reserve room so the expanded switch doesn't cover the nav links */
+@media (min-width:721px) {
+  .themesw {
+    margin-left: 4.2rem
   }
 }
