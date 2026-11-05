@@ -419,6 +419,21 @@ a:focus-visible {
   flex: none;
 }
 
+/* the "system" option shows a computer on desktop and a phone on touch / small screens */
+.themesw .i-mobile {
+  display: none;
+}
+
+@media (hover: none), (max-width: 720px) {
+  .themesw .i-desk {
+    display: none;
+  }
+
+  .themesw .i-mobile {
+    display: block;
+  }
+}
+
 /* The pill is a quiet grey. Green only shows up on the chosen option and on whatever you point at. */
 .themesw-in {
   --pick: color-mix(in srgb, var(--accent) 14%, var(--panel));
@@ -1859,6 +1874,36 @@ dialog a:focus-visible {
   animation-delay: 0.58s, 1.26s;
 }
 
+/* touch screens have no hover, so show the finished, animated icon from the start */
+@media (hover: none) {
+  .cta-chat .out {
+    opacity: 0;
+  }
+
+  .cta-chat .solid {
+    opacity: 1;
+    transform: none;
+  }
+
+  .cta-chat .dot {
+    animation:
+      dot-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards,
+      typing 1.2s ease-in-out infinite;
+  }
+
+  .cta-chat .dot:nth-child(2) {
+    animation-delay: 0.3s, 0.9s;
+  }
+
+  .cta-chat .dot:nth-child(3) {
+    animation-delay: 0.44s, 1.08s;
+  }
+
+  .cta-chat .dot:nth-child(4) {
+    animation-delay: 0.58s, 1.26s;
+  }
+}
+
 @keyframes dot-in {
   from {
     transform: scale(0);
@@ -1890,7 +1935,8 @@ dialog a:focus-visible {
   }
 
   .cta-chat:hover .dot,
-  .cta-chat:focus-visible .dot {
+  .cta-chat:focus-visible .dot,
+  .cta-chat .dot {
     animation: none;
   }
 }
