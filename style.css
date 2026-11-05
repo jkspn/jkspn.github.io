@@ -1819,3 +1819,107 @@ dialog {
     justify-content: center
   }
 }
+#contact-form {
+  grid-template-columns: minmax(0, 1fr)
+}
+
+/* contact form actions: Download and Copy email are quiet, Send leads */
+.cd-aux {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  margin-left: -.7rem
+}
+
+.cd-actions .dl-trigger.labeled,
+.cd-actions .copy-btn {
+  padding: 0 .7rem;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  border-color: transparent;
+  color: var(--muted)
+}
+
+.cd-actions .dl-trigger.labeled:hover,
+.cd-actions .dl-trigger.labeled[aria-expanded="true"],
+.cd-actions .copy-btn:hover {
+  background: var(--panel);
+  border-color: transparent;
+  color: var(--ink)
+}
+
+.cd-actions .dl-trigger.labeled .i-pdf,
+.cd-actions .copy-btn .i-copy {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: inherit
+}
+
+.copy-btn.copied {
+  color: var(--accent)
+}
+
+.cd-actions .btn.solid {
+  white-space: nowrap
+}
+
+@media (max-width: 560px) {
+  .cd-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem
+  }
+
+  .cd-aux {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
+    margin-left: 0;
+    gap: .6rem
+  }
+
+  .cd-aux .dl {
+    min-width: 0
+  }
+
+  .cd-aux .dl {
+    display: flex
+  }
+
+  .cd-aux .dl-trigger.labeled,
+  .cd-aux .copy-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 0 .5rem;
+    justify-content: center;
+    background: var(--panel)
+  }
+
+  .cd-actions .btn.solid {
+    width: 100%
+  }
+}
+
+/* tooltips would be clipped inside the dialog */
+.cd-actions .dl-trigger[data-tip]::after {
+  display: none
+}
+
+/* navbar Download: tooltip opens below the pill */
+.links .dl-trigger.navdl[data-tip]::after {
+  bottom: auto;
+  top: calc(100% + .9rem);
+  transform: translate(-50%, -3px)
+}
+
+.links .dl-trigger.navdl[data-tip][aria-expanded="false"]:focus-visible::after {
+  transform: translate(-50%, 0)
+}
+
+@media (hover:hover) {
+  .links .dl-trigger.navdl[data-tip][aria-expanded="false"]:hover::after {
+    transform: translate(-50%, 0)
+  }
+}

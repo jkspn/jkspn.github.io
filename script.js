@@ -46,6 +46,14 @@
     var EMAIL = 'john@jkspn.xyz', form = d.getElementById('contact-form'), msg = d.getElementById('cf-message');
     [].slice.call(d.querySelectorAll('[data-contact]')).forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); var t = d.getElementById('cd-status'); if (t) { t.hidden = true; t.textContent = ''; } dlg.showModal(); }); });
     d.getElementById('cd-close').addEventListener('click', function () { dlg.close(); });
+    var ce = d.getElementById('cd-copy-email'), ceT;
+    if (ce) ce.addEventListener('click', function () {
+      var lb = ce.querySelector('.copy-lbl');
+      var done = function () { ce.classList.add('copied'); lb.textContent = 'Copied'; clearTimeout(ceT); ceT = setTimeout(function () { ce.classList.remove('copied'); lb.textContent = 'Copy email'; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(EMAIL).then(done, function () { }); return; }
+      var ta = d.createElement('textarea'); ta.value = EMAIL; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0'; d.body.appendChild(ta); ta.select();
+      try { if (d.execCommand('copy')) done(); } catch (x) { } d.body.removeChild(ta);
+    });
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
