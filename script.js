@@ -299,6 +299,19 @@
   var y = d.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
+  // Copyright icon in the footer: click or tap to show / hide the build time
+  var stampBtn = d.getElementById('stamp-btn'),
+    stamp = d.getElementById('stamp');
+  if (stampBtn && stamp) {
+    stampBtn.addEventListener('click', function () {
+      var open = stamp.hidden,
+        name = d.getElementById('foot-name');
+      stamp.hidden = !open;
+      if (name) name.hidden = open;
+      stampBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var items = [].slice.call(d.querySelectorAll('.reveal'));
   if (!('IntersectionObserver' in window) || reduce) {

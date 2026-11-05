@@ -2060,7 +2060,6 @@ dialog {
   color: var(--muted);
   font: inherit;
   font-size: 0.95rem;
-  transition: color 0.15s;
 }
 
 .links .dl-trigger.navdl:hover,
@@ -2610,5 +2609,41 @@ dialog {
 @media (prefers-reduced-motion: reduce) {
   .sky i {
     animation: none !important;
+  }
+}
+
+/* the copyright icon in the footer: click or tap it to show the build time (YYMMDD HHMM).
+   The stamp is set by hand when the page is written. */
+.copy-mark {
+  display: inline-flex;
+  vertical-align: -0.04em;
+  margin-right: 0.15em;
+  width: 0.8em;
+  height: 0.8em;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.copy-mark svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.stamp {
+  color: color-mix(in srgb, var(--faint) 42%, var(--bg));
+  animation: fade-in 0.25s ease-out;
+}
+
+.stamp[hidden] {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 }
