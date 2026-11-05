@@ -1,0 +1,27 @@
+version: 1
+project: jkspn.xyz
+
+events:
+  contact_open:
+    description: Someone clicked a Let's Chat button and the contact popup opened
+    tags: [contact]
+    props:
+      location:
+        type: string
+        enum: [navbar, hero, footer]
+
+  copy_email:
+    description: Someone clicked Copy email in the contact popup
+    tags: [contact]
+
+  contact_send:
+    description: Someone clicked Send in Email App in the contact popup
+    tags: [contact]
+
+  download:
+    description: Someone opened a PDF from the Download menu
+    tags: [downloads]
+    props:
+      file:
+        type: string
+        enum: [cv, selected_work]
